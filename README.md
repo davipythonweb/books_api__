@@ -58,3 +58,12 @@
 
 ##### lib para conexao
 `pip install psycopg2`
+
+-acessar o postgres pelo powershell
+`psql -U postgres`
+- ver versao do postgres pelo powershell
+`psql --version`
+- listar todas as tabelas do postgres
+`\l`
+- criar database no shell
+`CREATE DATABASE bookstore;`
