@@ -13,6 +13,7 @@
 `permissoes admin -> all`
 `permissoes user -> safe_methods= GET, HEAD, OPTIONS`
 
+
 - Autenticação
 `djangorestframework-simplejwt`
 
@@ -24,14 +25,13 @@
 `python manage.py startapp <nome_do_app>`
 `python mange.py makemigrations`
 
-`adm controller`
+- adm controller
+`admsuper`
+`Adm$50001`
 
-*admsuper
-*Adm$50001
-
-`user_teste`
-*adm_leitura
-*book@reading
+- user_teste
+`adm_leitura`
+`book@reading`
 
 </details>
 
@@ -52,3 +52,9 @@
 
 - runing unitest- para o test_django => python manage.py test
 - com lib pytest-watch => ptw
+
+#### Database
+`postgresql`
+
+##### lib para conexao
+`pip install psycopg2`
