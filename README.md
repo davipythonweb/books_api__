@@ -69,5 +69,5 @@
 - listar todas as tabelas do postgres
 `\l`
 
-- criar database no shell
+- criar database no shell com comando SQL
 `CREATE DATABASE bookstore;`
