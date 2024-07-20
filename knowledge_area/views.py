@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from knowledge_area.models import Knowledge_Area
+
+from knowledge_area.serializers import KnowledgeAreaSerilizer
 
 
 """
@@ -16,7 +18,6 @@ avaliações = reviews #equivalente a {reviews}
  
 """
 
-def knowledge_area(request):
-    return HttpResponse('Books_API')
-
-
+class KnowledgeAreaCreateListView(generics.ListCreateAPIView):
+    queryset = Knowledge_Area.objects.all()
+    serializer_class = KnowledgeAreaSerilizer
