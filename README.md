@@ -31,7 +31,7 @@
 `Adm$50001`
 
 - user_teste
-`adm_leitura`
+`user-test`
 `book@reading`
 
 </details>
