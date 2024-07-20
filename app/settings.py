@@ -4,6 +4,8 @@ import os
 
 from dotenv import load_dotenv
 
+from datetime import timedelta
+
 load_dotenv()
 
 
@@ -21,6 +23,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
 
 # CONFIGURAÇAO PARA OS HOSTS NA PRGRAMAÇAO EM NUVEM
 
@@ -44,6 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'rest_framework_simplejwt',
+
     'knowledge_area',
 ]
 
@@ -145,3 +153,24 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
+
+# configuração retirada da documentação do django-rest-framework-simplejwt
+# variavel e ambiente do DRF
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+
+# Sobescrevendo as configurções do simple-jwt
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+}
