@@ -4,6 +4,18 @@ from knowledge_area.models import Knowledge_Area
 from knowledge_area.serializers import KnowledgeAreaSerilizer
 
 
+
+# fluxo de criação dos apps:
+"""
+models
+views
+serializers
+urls
+tests
+admin
+"""
+
+
 """
 trilha do projeto.
 
