@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import generics
+from matters.models import Matter
 
-# Create your views here.
+
+class MatterCreateListView(generics.ListCreateAPIView):
+    queryset = Matter.objects.all()
+    
