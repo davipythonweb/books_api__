@@ -8,7 +8,8 @@ NATIONALITY_CHOICES =(
     ('CHN', 'China'),
     ('JPN', 'Japão'),
     ('NLD', 'Holanda'),
-    ('GRC', 'Grecia')
+    ('GRC', 'Grecia'),
+    ('EGY', 'Egito'),
 
 )
 
