@@ -23,6 +23,8 @@ area de conhecimento = knowledge_area  #equivalente a {genres}
 
 assuntos = matters #equivalente a {actors}
 
+escritores = writers #equivalente tambem a {actors} 
+
 livros = books #equivalente a {movies}
 
 
