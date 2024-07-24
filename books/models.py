@@ -7,7 +7,7 @@ from authors.models import Author
 
 class Book(models.Model):
     title = models.CharField(max_length=30)
-    publishing_company = models.CharField(max_length=20)
+    publishing_company = models.CharField(max_length=30)
     knowledge_area = models.ForeignKey(
         Knowledge_Area,
         on_delete=models.PROTECT,
@@ -24,7 +24,7 @@ class Book(models.Model):
     author = models.ForeignKey(
         Author,
         on_delete=models.PROTECT,
-        related_name='authors'
+        related_name='books'
     )
     resume = models.TextField(null=True, blank=True)
 
