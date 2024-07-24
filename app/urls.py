@@ -6,4 +6,6 @@ urlpatterns = [
 
     path('api/v1/', include('knowledge_area.urls')),
     path('api/v1/', include('matters.urls')),
+    path('api/v1/', include('books.urls')),
+    path('api/v1/', include('authors.urls')),
 ]
