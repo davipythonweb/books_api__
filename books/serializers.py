@@ -22,11 +22,11 @@ class BookSerializer(serializers.ModelSerializer):
         return value
     
 class BookListDetailSerializer(serializers.ModelSerializer):
-    matters = MatterSerializer(many=True)
+    matter = MatterSerializer(many=True)
     knowledge_area = KnowledgeAreaSerilizer()
 
     class Meta:
         model = Book
-        fields = ['id', 'title', 'knowledge_area', 'matters', 'release_date', 'resume']
+        fields = ['id', 'title', 'knowledge_area', 'matter', 'release_date','writer','publishing_company','resume']
 
 
