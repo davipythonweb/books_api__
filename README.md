@@ -71,3 +71,7 @@
 
 - criar database no shell com comando SQL
 `CREATE DATABASE bookstore;`
+
+
+- urls para abreviações de paises
+`https://www.pucsp.br/~acomin/recursos/codpais.html`
