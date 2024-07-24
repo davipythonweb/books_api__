@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     'knowledge_area',
     'matters',
+    'books',
 ]
 
 MIDDLEWARE = [
