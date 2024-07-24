@@ -17,7 +17,7 @@ class BookSerializer(serializers.ModelSerializer):
         return value
     
     def validate_resume(self, value):
-        if len(value) > 100:
+        if len(value) > 200:
             raise serializers.ValidationError('Resumo não deve ser maior que 200 caracteres.')
         return value
     
