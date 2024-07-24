@@ -34,3 +34,7 @@ avaliações = reviews #equivalente a {reviews}
 class KnowledgeAreaCreateListView(generics.ListCreateAPIView):
     queryset = Knowledge_Area.objects.all()
     serializer_class = KnowledgeAreaSerilizer
+
+class KnowledgeAreaRetrieveUpdateDestoyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Knowledge_Area.objects.all()
+    serializer_class = KnowledgeAreaSerilizer
