@@ -12,10 +12,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Matter',
+            name='Writer',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('matter', models.CharField(max_length=30)),
+                ('writer', models.CharField(max_length=40)),
+                ('nationality', models.CharField(blank=True, choices=[('USA', 'Estados Unidos'), ('BRA', 'Brasil'), ('FRA', 'França'), ('COL', 'Colombia'), ('CHN', 'China'), ('JPN', 'Japão'), ('NLD', 'Holanda'), ('GRC', 'Grecia')], max_length=20, null=True)),
             ],
         ),
     ]
