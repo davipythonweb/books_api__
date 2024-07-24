@@ -12,8 +12,8 @@ NATIONALITY_CHOICES =(
 
 )
 
-class Author(models.Model):
-    author = models.CharField(max_length=40)
+class Writer(models.Model):
+    writer = models.CharField(max_length=40)
     nationality = models.CharField(
         max_length=20,
         choices=NATIONALITY_CHOICES,
@@ -22,4 +22,4 @@ class Author(models.Model):
     )
 
     def __str__(self) -> str:
-        return self.author
+        return self.writer
