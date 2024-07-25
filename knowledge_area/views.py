@@ -16,6 +16,7 @@ admin
 """
 
 
+
 """
 trilha do projeto.
 
@@ -32,6 +33,8 @@ avaliações = reviews #equivalente a {reviews}
 (choices com uma lista com as estrelas possiveis para avaliar.)
  
 """
+
+
 
 class KnowledgeAreaCreateListView(generics.ListCreateAPIView):
     queryset = Knowledge_Area.objects.all()
