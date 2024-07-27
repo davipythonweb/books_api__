@@ -25,5 +25,5 @@ class Review(models.Model):
     )
     comment = models.TextField(null=True, blank=True)
 
-    def __str__(self) -> str:
-        return self.book
+    def __str__(self):
+        return (self.book)
