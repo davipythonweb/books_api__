@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'matters',
     'books',
     'writers',
+    'reviews',
 ]
 
 MIDDLEWARE = [
