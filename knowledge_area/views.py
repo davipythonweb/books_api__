@@ -3,6 +3,9 @@ from knowledge_area.models import Knowledge_Area
 
 from knowledge_area.serializers import KnowledgeAreaSerilizer
 
+from rest_framework.permissions import IsAuthenticated
+from app.permissions import GlobalDefaultPermission
+
 
 
 # fluxo de criação dos apps:
@@ -37,9 +40,11 @@ avaliações = reviews #equivalente a {reviews}
 
 
 class KnowledgeAreaCreateListView(generics.ListCreateAPIView):
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission)
     queryset = Knowledge_Area.objects.all()
     serializer_class = KnowledgeAreaSerilizer
 
 class KnowledgeAreaRetrieveUpdateDestoyView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission)
     queryset = Knowledge_Area.objects.all()
     serializer_class = KnowledgeAreaSerilizer

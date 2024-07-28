@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from books.models import Book
 
+from django.db.models import Avg
+
 from matters.serializers import MatterSerializer
 from knowledge_area.serializers import KnowledgeAreaSerilizer
 
@@ -28,5 +30,19 @@ class BookListDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = ['id', 'title', 'knowledge_area', 'matter', 'release_date','writer','publishing_company','resume']
+
+    
+    def get_rate(self, obj):
+        average_rate = obj.reviews.aggregate(Avg('stars'))['stars__avg']
+        if average_rate:
+            return round(average_rate, 1)  
+
+
+
+class BookStatsSerializer(serializers.Serializer):
+    total_books = serializers.IntegerField()  
+    books_by_knowledge_area = serializers.ListField()  
+    total_reviews = serializers.IntegerField()  
+    average_stars = serializers.FloatField()  
 
 
